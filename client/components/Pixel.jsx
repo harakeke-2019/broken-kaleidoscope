@@ -6,7 +6,7 @@ const Pixel = () => {
       style={{
         height: "50px",
         width: "50px",
-        backgroundColor: "blue"
+        backgroundColor: "cornflowerblue"
       }}
     />
   );
