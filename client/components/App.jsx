@@ -4,9 +4,10 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <div>Yup.
+    <div>
+      <div>Yup.</div>
+      <div><Pixel /></div>
     </div>
-    <div> <Pixel/></div>
   )
 }
 
