@@ -12,3 +12,33 @@ div {
   display: flex;
   flex-wrap: wrap;
 }
+
+.pixel {
+  height: 100px;
+  width: 100px;
+  background-color: grey;
+}
+
+#red {
+  background-color: red
+}
+
+#blue {
+  background-color: blue
+}
+
+#yellow {
+  background-color: yellow
+}
+
+#purple {
+  background-color: purple
+}
+
+#green {
+  background-color: green
+}
+
+#orange {
+  background-color: orange
+}
