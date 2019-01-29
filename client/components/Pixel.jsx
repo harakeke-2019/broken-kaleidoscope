@@ -9,10 +9,13 @@ class Pixel extends React.Component {
     super(props)
       this.state = {
         style: {
-          fontFamily: 'Times New Roman',
-          height: '5px',
-          width: '5px',
-          backgroundColor: randomHexColor()
+          height: '0px',
+          width: '0px',
+          // borderRadius: '50%',
+          borderLeft: '25px solid transparent',
+          borderRight: '25px solid transparent',
+          borderTop: '50px solid white',
+          backgroundColor: 'black'
         }
       } 
   }
@@ -20,10 +23,27 @@ class Pixel extends React.Component {
   clickHandler = evt => {
     this.setState({
       style: {
-        fontFamily: 'Times New Roman',
-        height: '5px',
-        width: '5px',
+        height: '0px',
+        width: '0px',
+        // borderRadius: '50%',
+        borderLeft: '25px solid transparent',
+        borderRight: '25px solid transparent',
+        borderBottom: '50px solid black',
         backgroundColor: 'black'
+      }
+    })
+  }
+
+  mouseEnter = evt => {
+    this.setState({
+      style: {
+          height: '0px',
+          width: '0px',
+          // borderRadius: '50%',
+          borderLeft: '25px solid transparent',
+          borderRight: '25px solid transparent',
+          borderTop: '50px solid white',
+          backgroundColor: randomHexColor()
       }
     })
   }
@@ -31,16 +51,20 @@ class Pixel extends React.Component {
   mouseLeave = evt => {
     this.setState({
       style: {
-        height: '5px', 
-        width: '5px',
-        backgroundColor: randomHexColor()
+          height: '0px',
+          width: '0px',
+          // borderRadius: '50%',
+          borderLeft: '25x solid transparent',
+          borderRight: '25px solid transparent',
+          borderTop: '50px solid white',
+          backgroundColor: 'black'
       }
     })
   }
 
   render () {
     return (
-      <div onMouseLeave={this.mouseLeave} onClick={this.clickHandler} style={this.state.style}></div>
+      <div onMouseLeave={this.mouseLeave} onMouseEnter={this.mouseEnter} onClick={this.clickHandler} style={this.state.style}></div>
     )
   }
 }
