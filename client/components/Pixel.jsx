@@ -36,9 +36,20 @@ mouseOver = evt => {
      })
   }
 
+onDoubleClick = evt => {
+  this.setState({
+    style: {
+      height: '100px',
+        width: '100px',
+        background: 'white'
+    }
+  })
+}
+
+
   render () {
     return (
-      <div style ={ this.state.style } onClick={this.clickHandler} onMouseEnter={this.mouseOver}>  </div>
+      <div style ={ this.state.style } onClick={this.clickHandler} onMouseEnter={this.mouseOver} onDoubleClick={this.onDoubleClick}>  </div>
     )
   }
 }
