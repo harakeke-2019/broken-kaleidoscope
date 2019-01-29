@@ -15,9 +15,20 @@ class Pixel extends React.Component {
       }
     }
   }
+
+  clickHandler = evt => {
+    this.setState({
+      style: {
+        height: '40px',
+        width: '40px',
+        backgroundColor: randomHexColor()
+      }
+    })
+  }
+
   render (props) {
     return (
-      <div style ={this.state.style} ></div>
+      <div style ={this.state.style} onClick={this.clickHandler} ></div>
     )
   }
 }
