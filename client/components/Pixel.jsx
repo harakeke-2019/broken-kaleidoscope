@@ -1,4 +1,5 @@
 import React from 'react'
+import { green, black } from 'ansi-colors';
 
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
@@ -20,17 +21,26 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '200px',
-        width: '200px',
+        height: '100px',
+        width: '100px',
         backgroundColor: randomHexColor()
       }
-      // ... update style here ...
+    })
+  }
+
+  mouseLeave = evt => {
+    this.setState({
+      style: {
+        height: '100px', 
+        width: '100px',
+        backgroundColor: 'black'
+      }
     })
   }
 
   render () {
     return (
-      <div onClick={this.clickHandler} style={this.state.style}></div>
+      <div onMouseLeave={this.mouseLeave} onClick={this.clickHandler} style={this.state.style}></div>
     )
   }
 }

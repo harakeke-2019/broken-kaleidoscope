@@ -1,110 +1,15 @@
 import React from 'react'
 
+
 import Pixel from './Pixel'
 
 const App = () => {
+  let componentArray = []
+  for (let i = 0; i < 10000; i++)
+  componentArray.push(<Pixel key={i}/>)
   return (
     <div>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
+      {componentArray}
     </div>
   )
 }
