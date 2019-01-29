@@ -10,8 +10,8 @@ class Pixel extends React.Component {
       this.state = {
         style: {
           fontFamily: 'Times New Roman',
-          height: '100px',
-          width: '100px',
+          height: '5px',
+          width: '5px',
           backgroundColor: randomHexColor()
         }
       } 
@@ -21,9 +21,9 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         fontFamily: 'Times New Roman',
-        height: '100px',
-        width: '100px',
-        backgroundColor: randomHexColor()
+        height: '5px',
+        width: '5px',
+        backgroundColor: 'black'
       }
     })
   }
@@ -31,9 +31,9 @@ class Pixel extends React.Component {
   mouseLeave = evt => {
     this.setState({
       style: {
-        height: '100px', 
-        width: '100px',
-        backgroundColor: 'black'
+        height: '5px', 
+        width: '5px',
+        backgroundColor: randomHexColor()
       }
     })
   }
