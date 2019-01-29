@@ -1,11 +1,9 @@
 import React from 'react'
 
-function Pixel (props) {
+function Pixel () {
   return (
-    <div>
-      <div style={{backgroundColor: red}}></div>
+    <div style={{backgroundColor: 'purple', height:'40px', width:'40px'}}>
     </div>
-  )
-}
+  )}
 
 export default Pixel
