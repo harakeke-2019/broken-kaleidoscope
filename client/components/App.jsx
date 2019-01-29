@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import Pixel from "./Pixel";
 
 const App = () => {
-  return (
-    <div>Yup.</div>
-  )
-}
+  return Array.from(Array(200), () => <Pixel />);
+};
 
-export default App
+export default App;
