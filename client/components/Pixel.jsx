@@ -22,11 +22,28 @@ class Pixel extends React.Component {
       }
     }
   }
+
+  clickHandler = () => { this.setState(
+    {style: {
+      height: '40px',
+      width: '40px',
+      backgroundColor: randomHexColor()
+    }
+    })
+  }
+
   render () {
     return (
-      <div style = {this.state.style} ></div>
+      <div style = {this.state.style} onClick={() => this.clickHandler()}></div>
     )
   }
 }
+
+
+// render(){
+//   return(
+//     <div onClick={this.state.backgroundColor}></div>
+//   )
+// }
 
 export default Pixel
