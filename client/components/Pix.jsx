@@ -1,18 +1,42 @@
 import React from 'react'
 
-class Pix extends React.Component {
-  constructor () {
-    super()
+
+const randomColour = () => `#${Math.floor(Math.random() * 16777215).toString(16)}`
+const width = '5%'
+const height = '10%'
+
+export default class Pix extends React.Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      style: {
+        width,
+        height,
+        backgroundColor: randomColour()
+      }
+    }
+  }
+
+  changeColour = () => {
+    const style = {
+      width,
+      height,
+      backgroundColor: randomColour()
+    }
+
+    this.setState({
+      style
+    })
   }
 
   render () {
-    const randomHexColor = () =>
-      `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+    const { style } = this.state
     return (
-      <div className='pixel' style={{fontFamily: 'Times New Roman', backgroundColor: randomHexColor()}}>
-      </div>
+      <div
+        onClick={() => this.changeColour()}
+        onMouseEnter={() => this.changeColour()}
+        style={style} />
     )
   }
 }
-
-export default Pix
