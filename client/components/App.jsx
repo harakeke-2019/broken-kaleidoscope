@@ -3,8 +3,43 @@ import Pixel from './Pixel'
 
 const App = () => {
   return (
-    <div >
-      <Pixel/>
+    <div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
+      <div><Pixel /></div>
     </div>
   )
 }
