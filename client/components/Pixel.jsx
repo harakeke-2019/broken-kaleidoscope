@@ -16,25 +16,57 @@ class Pixel extends React.Component {
     super()
     this.state = {
       style: {
-        height: '40px',
-        width: '40px',
+        height: '50px',
+        width: '50px',
         backgroundColor: randomHexColor()
       }
     }
   }
 
-  clickHandler = () => { this.setState(
+  hoverHandler = () => { this.setState(
     {style: {
-      height: '40px',
-      width: '40px',
+      height: '50px',
+      width: '50px',
       backgroundColor: randomHexColor()
     }
     })
   }
+  clickHandler = () => { this.setState(
+    {style: {
+      height: '50px',
+      width: '50px',
+      backgroundColor: 'green'
+    }
+    })
+  }
+  dragHandler = () => { this.setState(
+    {style: {
+      height: '50px',
+      width: '50px',
+      backgroundColor: 'yellow'
+    }
+    })
+  }
+  rClick = (evt) => {
+    evt.preventDefault();
+    return this.setState(
+    {style: {
+      height: '50px',
+      width: '50px',
+      backgroundColor: 'black'
+    }
+    })
+  }
+
 
   render () {
     return (
-      <div style = {this.state.style} onClick={() => this.clickHandler()}></div>
+      <div style = 
+      {this.state.style}
+       onMouseEnter={() => this.hoverHandler()}
+       onClick={() => this.clickHandler()}
+        onDragEnter={()=> this.dragHandler()}
+        onContextMenu={(evt)=> this.rClick(evt)} ></div>
     )
   }
 }
