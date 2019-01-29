@@ -18,7 +18,7 @@ class Pixel extends React.Component {
       style: {
         height: '40px',
         width: '40px',
-        backgroundColor: `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+        backgroundColor: randomHexColor()
       }
     }
   }
