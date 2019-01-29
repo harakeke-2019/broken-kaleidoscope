@@ -56,7 +56,7 @@ class Pixel extends React.Component {
           // borderRadius: '50%',
           borderLeft: '25x solid transparent',
           borderRight: '25px solid transparent',
-          borderTop: '50px solid white',
+          borderTop: '50px solid light grey',
           backgroundColor: 'black'
       }
     })
