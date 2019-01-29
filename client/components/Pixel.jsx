@@ -24,10 +24,21 @@ class Pixel extends React.Component {
         }
        })
     }
+// onMouseEnter handler
+
+mouseOver = evt => {
+  this.setState({
+      style: {
+        height: '100px',
+        width: '100px',
+        background: 'green'
+      }
+     })
+  }
 
   render () {
     return (
-      <div style ={ this.state.style } onClick={this.clickHandler}> </div>
+      <div style ={ this.state.style } onClick={this.clickHandler} onMouseEnter={this.mouseOver}>  </div>
     )
   }
 }
