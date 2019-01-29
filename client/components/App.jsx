@@ -5,10 +5,9 @@ const App = () => {
 
   const components = []
 
-  for(let i = 0; i < 10000; i++){
+  for(let i = 0; i < 6000; i++){
     components.push(<Pixel/>)
   }
-  return components
 
   return (
     <div>
