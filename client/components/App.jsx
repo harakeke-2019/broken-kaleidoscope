@@ -3,17 +3,14 @@ import Pixel from './Pixel'
 
 const App = () => {
 
-  const components = []
 
-  for(let i = 0; i < 6000; i++){
-    components.push(<Pixel/>)
-  }
+  return Array.from(Array(6000), (_,i) => i + 1).fill(<Pixel />)
 
-  return (
-    <div>
-    {components}
-    </div>
-  )
+  // return (
+  //   <div>
+  //   {components}
+  //   </div>
+  // )
 }
 
 export default App
