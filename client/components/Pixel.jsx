@@ -46,10 +46,31 @@ onDoubleClick = evt => {
   })
 }
 
+onDragEnter = evt => {
+  this.setState({
+    style: {
+      height: '100px',
+        width: '100px',
+        background: 'yellow'
+    }
+  })
+}
+
+onContextMenu = evt => {
+  evt.preventDefault() 
+  this.setState({
+    style: {
+      height: '100px',
+        width: '100px',
+        background: 'black'
+    }
+  })
+}
+
 
   render () {
     return (
-      <div style ={ this.state.style } onClick={this.clickHandler} onMouseEnter={this.mouseOver} onDoubleClick={this.onDoubleClick}>  </div>
+      <div style ={ this.state.style } onClick={this.clickHandler} onMouseEnter={this.mouseOver} onDoubleClick={this.onDoubleClick} onDragEnter={this.onDragEnter} onContextMenu={this.onContextMenu}> </div>
     )
   }
 }
