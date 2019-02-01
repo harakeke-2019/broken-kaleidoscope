@@ -1,17 +1,5 @@
 import React from "react";
 
-// const Pixel = () => {
-//   return (
-//     <div
-//       style={{
-//         height: "50px",
-//         width: "50px",
-//         backgroundColor: "cornflowerblue"
-//       }}
-//     />
-//   );
-// };
-
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000)
     .toString(16)
@@ -29,8 +17,18 @@ class Pixel extends React.Component {
     };
   }
 
+  clickHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: randomHexColor()
+    };
+    this.setState({ style });
+  };
+
   render() {
-    return <div style={this.state.style}> </div>;
+    const { style } = this.state;
+    return <div onClick={() => this.clickHandler()} style={style} />;
   }
 }
 
