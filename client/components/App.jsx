@@ -1,13 +1,10 @@
 import React from 'react'
 import Pixel from './Pixel'
 
-//const pixels = Array.from({length:100000},(v,i)=>Pixel /)
+//const pixels = Array.from({length:5},(v,i)=>i)
 const App = () => {
-  return (
-    <div>
-     <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> 
-     <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> <Pixel /> 
-    </div>
+  return (  
+    Array.from({length:100000}, (e,i) => i).fill(<Pixel />)    
   )
 }
 

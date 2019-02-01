@@ -8,13 +8,14 @@ class Pixel extends React.Component {
     super()
     this.state = {
       style: {
-        height: '100px',
-        width: '100px',
+        height: '3px',
+        width: '3px',
         background: randomHexColor()
       }
     }
   }
-// event handler
+
+// // event handler
   clickHandler = evt => {
     this.setState({
         style: {
@@ -24,8 +25,8 @@ class Pixel extends React.Component {
         }
        })
     }
-// onMouseEnter handler
 
+// onMouseEnter handler
 mouseOver = evt => {
   this.setState({
       style: {
@@ -35,7 +36,7 @@ mouseOver = evt => {
       }
      })
   }
-
+//double click handler
 onDoubleClick = evt => {
   this.setState({
     style: {
@@ -46,6 +47,7 @@ onDoubleClick = evt => {
   })
 }
 
+//dragEnter handler
 onDragEnter = evt => {
   this.setState({
     style: {
@@ -70,7 +72,13 @@ onContextMenu = evt => {
 
   render () {
     return (
-      <div style ={ this.state.style } onClick={this.clickHandler} onMouseEnter={this.mouseOver} onDoubleClick={this.onDoubleClick} onDragEnter={this.onDragEnter} onContextMenu={this.onContextMenu}> </div>
+      <div style ={this.state.style } 
+        onClick={this.clickHandler} 
+        onMouseEnter={this.mouseOver} 
+        onDoubleClick={this.onDoubleClick} 
+        onDragEnter={this.onDragEnter} 
+        onContextMenu={this.onContextMenu}> 
+      </div>
     )
   }
 }
