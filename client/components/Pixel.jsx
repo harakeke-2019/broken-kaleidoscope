@@ -8,67 +8,75 @@ class Pixel extends React.Component {
     super()
     this.state = {
       style: {
-        height: '3px',
-        width: '3px',
+        height: '50px',
+        width: '50px',
         background: randomHexColor()
       }
     }
   }
-
-// // event handler
+  changeColor=()=>{
+    const style ={
+      width:'50px',
+      height:'50px',
+      backgroundColor: randomHexColor()
+    }
+    this.setState({
+      style
+    })
+  }
+// event handler
   clickHandler = evt => {
     this.setState({
         style: {
-          height: '100px',
-          width: '100px',
+          height: '50px',
+          width: '50px',
           background: randomHexColor()
         }
        })
     }
 
 // onMouseEnter handler
-mouseOver = evt => {
-  this.setState({
-      style: {
-        height: '100px',
-        width: '100px',
-        background: 'green'
-      }
-     })
-  }
-//double click handler
-onDoubleClick = evt => {
-  this.setState({
-    style: {
-      height: '100px',
-        width: '100px',
-        background: 'white'
+  mouseOver = evt => {
+    this.setState({
+        style: {
+          height: '50px',
+          width: '50px',
+          background: 'green'
+        }
+      })
     }
-  })
-}
+  //double click handler
+  onDoubleClick = evt => {
+    this.setState({
+      style: {
+        height: '50px',
+          width: '50px',
+          background: 'white'
+      }
+    })
+  }
 
 //dragEnter handler
-onDragEnter = evt => {
-  this.setState({
-    style: {
-      height: '100px',
-        width: '100px',
-        background: 'yellow'
-    }
-  })
-}
+  onDragEnter = evt => {
+    this.setState({
+      style: {
+        height: '50px',
+          width: '50px',
+          background: 'yellow'
+      }
+    })
+  }
 
-onContextMenu = evt => {
-  evt.preventDefault() 
-  this.setState({
-    style: {
-      height: '100px',
-        width: '100px',
-        background: 'black'
-    }
-  })
-}
-
+  onContextMenu = evt => {
+    evt.preventDefault() 
+    this.setState({
+      style: {
+        height: '50px',
+          width: '50px',
+          background: 'black'
+      }
+    })
+  }
 
   render () {
     return (
