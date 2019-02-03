@@ -5,7 +5,7 @@ import {Pixel} from './Pixel'
 const App = () => {
   return (
     <div className = 'container'>
-    <Pixel/>
+    {Array.from({length:10000},()=><Pixel/>)}
     </div>
   )
 }
