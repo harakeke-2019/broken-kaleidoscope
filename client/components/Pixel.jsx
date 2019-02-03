@@ -15,9 +15,19 @@ const randomHexColor = () =>
             }
         }
     }
+
+    clickHandler = ()=>{
+        this.setState ({
+            style: {
+                width: "20px",
+                height: "20px",
+                backgroundColor: "black"
+        }})
+    }
+   
     render(){
         return(
-            <div style = {this.state.style}></div>
+            <div style = {this.state.style} onClick = {this.clickHandler}></div>
         )
     }
 }
