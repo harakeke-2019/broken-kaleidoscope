@@ -1,5 +1,9 @@
 import React from 'react'
 
+const randomHexColor = () =>
+  `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
+
+
  export class Pixel extends React.Component{
     constructor(){
         super()
@@ -7,7 +11,7 @@ import React from 'react'
             style: {
                 width: "10px",
                 height: "10px",
-                backgroundColor: "cornflowerblue"
+                backgroundColor: randomHexColor()
             }
         }
     }
