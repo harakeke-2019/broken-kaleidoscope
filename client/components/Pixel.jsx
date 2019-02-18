@@ -10,8 +10,8 @@ class Pixel extends React.Component {
     super();
     this.state = {
       style: {
-        height: "50px",
-        width: "50px",
+        height: "5px",
+        width: "5px",
         backgroundColor: randomHexColor()
       }
     };
@@ -19,8 +19,8 @@ class Pixel extends React.Component {
 
   clickHandler = () => {
     const style = {
-      width: "50px",
-      height: "50px",
+      width: "5px",
+      height: "5px",
       backgroundColor: randomHexColor()
     };
     this.setState({ style });
@@ -28,9 +28,9 @@ class Pixel extends React.Component {
 
   enterHandler = () => {
     const style = {
-      width: "50px",
-      height: "50px",
-      backgroundColor: "white"
+      width: "5px",
+      height: "5px",
+      backgroundColor: "yellow"
     };
     this.setState({ style });
   };
@@ -82,7 +82,13 @@ class Pixel extends React.Component {
 
   render() {
     const { style } = this.state;
-    return <div onClick={() => this.clickHandler()} style={style} />;
+    return (
+      <div
+        onClick={() => this.clickHandler()}
+        onMouseEnter={() => this.enterHandler()}
+        style={style}
+      />
+    );
 
     // return (
     //   <div
