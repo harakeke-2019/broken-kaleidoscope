@@ -26,9 +26,85 @@ class Pixel extends React.Component {
     this.setState({ style });
   };
 
+  enterHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: "white"
+    };
+    this.setState({ style });
+  };
+
+  leaveHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: "magenta"
+    };
+    this.setState({ style });
+  };
+
+  contextHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: "black"
+    };
+    this.setState({ style });
+  };
+
+  doubleClickHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: "white"
+    };
+    this.setState({ style });
+  };
+
+  dragEnterHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: "yellow"
+    };
+    this.setState({ style });
+  };
+
+  dragExitHandler = () => {
+    const style = {
+      width: "50px",
+      height: "50px",
+      backgroundColor: randomHexColor()
+    };
+    this.setState({ style });
+  };
+
   render() {
     const { style } = this.state;
     return <div onClick={() => this.clickHandler()} style={style} />;
+
+    // return (
+    //   <div
+    //     onMouseOver={() => this.enterHandler()}
+    //     onMouseLeave={() => this.leaveHandler()}
+    //     style={style}
+    //   />
+    // );
+
+    // return <div onContextMenu={() => this.contextHandler()} style={style} />;
+
+    // return (
+    //   <div onDoubleClick={() => this.doubleClickHandler()} style={style} />
+    // );
+
+    // return (
+    //   <div
+    //     onDragEnter={() => this.dragEnterHandler()}
+    //     onDragExit={() => this.dragExitHandler()}
+    //     style={style}
+    //   />
+    // );
   }
 }
 
